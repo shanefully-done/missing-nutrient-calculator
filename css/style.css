@@ -42,7 +42,7 @@
 }
 
 .calculator {
-    margin: auto;
+    margin: 1rem auto;
 }
 
 .inputForm input {
@@ -73,6 +73,9 @@
 
 .buttons > .lang {
     float: right;
+    background-color: crimson;
+    color: white;
+    font-weight: bold;
 }
 
 .alert {
@@ -80,4 +83,11 @@
     font-size: 1rem;
     color: red;
     text-align: center;
+}
+
+.bug {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 1rem;
+    font-size: 14px;
 }

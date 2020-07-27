@@ -11,7 +11,8 @@ var dataLanguage = {
 		"impossible": "Impossible calculation. Try again.",
 		"full": "Please delete one input.",
 
-		"lang": "한국어"
+		"lang": "한국어",
+		"bug": "Report bugs to Shane, thanks."
 	},
 	"ko": {
 		"calories": "칼로리",
@@ -25,7 +26,8 @@ var dataLanguage = {
 		"impossible": "불가능한 계산입니다. 다시 입력해주세요.",
 		"full": "입력된 칸 하나를 지워주세요.",
 
-		"lang": "ENGLISH"
+		"lang": "ENGLISH",
+		"bug": "버그 제보는 쉐인에게 해주세요."
 	}
 }
 var userLanguage = "en";
@@ -52,6 +54,7 @@ function setLanguage() {
     document.querySelector("#lcalculate").innerHTML = interfaceLanguage.calculate;
     document.querySelector("#lreset").innerHTML = interfaceLanguage.reset;
     document.querySelector("#llang").innerHTML = interfaceLanguage.lang;
+    document.querySelector("#bug").innerHTML = interfaceLanguage.bug;
 }
 
 function switchLanguage() {
