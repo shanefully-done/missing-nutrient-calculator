@@ -1,5 +1,10 @@
 /* Larger than mobile */
 @media (min-width: 400px) {
+    body {
+        zoom: 2;
+        -moz-transform: scale(3);
+        -moz-transform-origin: 0 0;
+    }
     .calculator {
         max-width: 90%;
     }
@@ -7,6 +12,11 @@
 
 /* Larger than phablet (also point when grid becomes active) */
 @media (min-width: 550px) {
+    body {
+        zoom: 2;
+        -moz-transform: scale(3);
+        -moz-transform-origin: 0 0;
+    }
     .calculator {
         max-width: 80%;
     }
@@ -14,6 +24,11 @@
 
 /* Larger than tablet */
 @media (min-width: 750px) {
+    body {
+        zoom: 1.5;
+        -moz-transform: scale(3);
+        -moz-transform-origin: 0 0;
+    }
     .calculator {
         max-width: 333px;
     }
@@ -28,7 +43,6 @@
 
 .calculator {
     margin: auto;
-    max-width: 80%;
 }
 
 .inputForm input {
