@@ -2,31 +2,50 @@
 <html>
 
 <head>
+    <link rel="stylesheet" type="text/css" href="./css/normalise.css">
+    <!-- <link rel="stylesheet" type="text/css" href="./css/skeleton.css"> -->
     <link rel="stylesheet" type="text/css" href="./css/style.css">
     <script src="./js/calculate.js"></script>
 </head>
 
 <body>
-    <div class="cal">
-        <input type="number" min="0" id="cal" class="ical" placeholder="" onchange="calculate()"> Calories / 칼로리
-    </div>
+    <div class="calculator">
+        <div class="inputForm">
+            <label id="lcal"></label>
+            <div class="cal">
+                <input type="number" min="0" id="cal" class="ical" placeholder="" onchange="calculate()">
+            </div>
+            
+            <label id="ltotalcarb"></label>
+            <div class="totalcarb">
+                <input type="number" min="0" id="totalcarb" class="itotalcarb" placeholder="" onchange="calculate()">
+            </div>
+            
+            <label id="lprotein"></label>
+            <div class="protein">
+                <input type="number" min="0" id="protein" class="iprotein" placeholder="" onchange="calculate()">
+            </div>
+            
+            <label id="lfat"></label>
+            <div class="fat">
+                <input type="number" min="0" id="fat" class="ifat" placeholder="" onchange="calculate()">
+            </div>
+        </div>
+        
+        <div class="buttons">
+            <button class="calculate" onclick="calculate()">
+                <label id="lcalculate"></label>
+            </button>
+            <button class="reset" onclick="reset()">
+                <label id="lreset"></label>
+            </button>
+            <button class="lang" onclick="switchLanguage()">
+                <label id="llang"></label>
+            </button>
+        </div>
 
-    <div class="totalcarb">
-        <input type="number" min="0" id="totalcarb" class="itotalcarb" placeholder="" onchange="calculate()"> Total Carbs / 총 탄수화물
-    </div>
-
-    <div class="protein">
-        <input type="number" min="0" id="protein" class="iprotein" placeholder="" onchange="calculate()"> Protein / 단백질
-    </div>
-
-    <div class="fat">
-        <input type="number" min="0" id="fat" class="ifat" placeholder="" onchange="calculate()"> Fat / 지방
-    </div>
-
-    <div>
-        <button class="calculate" onclick="calculate()">Calculate / 계산</button>
-        <button class="calculate" onclick="empty()">Empty / 비우기</button>
+        <div id="alert" class="alert"></div>
     </div>
 </body>
-
+<script src="./js/language.js"></script>
 </html>
