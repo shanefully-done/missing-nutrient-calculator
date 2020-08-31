@@ -28,7 +28,7 @@
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .container {
   display: grid;
-  grid-template-areas: 'header' 'alert' 'input1' 'input2' 'input3' 'input4' 'button1' 'button2' 'button3' 'bug';
+  grid-template-areas: 'header' 'alert' 'input1' 'input2' 'input3' 'input4' 'button1' 'button2' 'button3';
   position: relative;
   max-width: 500px;
   margin: 0 auto;
@@ -562,10 +562,6 @@ body {
   grid-area: button3;
 }
 
-.bug {
-  grid-area: bug;
-}
-
 /* Larger than mobile */
 @media only screen and (min-width: 400px) {
   body {
@@ -583,7 +579,7 @@ body {
 /* Larger than tablet */
 @media only screen and (min-width: 750px) {
   .container {
-    grid-template-areas: 'header header' 'alert alert' 'input1 button1' 'input2 button2' 'input3 button3' 'input4 bug';
+    grid-template-areas: 'header header' 'alert alert' 'input1 button1' 'input2 button2' 'input3 button3' 'empty input4';
     grid-column-gap: 1.75em;
   }
 }
@@ -591,7 +587,7 @@ body {
 /* Larger than desktop */
 @media only screen and (min-width: 1000px) {
   .container {
-    grid-template-areas: 'header header' 'alert alert' 'input1 button1' 'input2 button2' 'input3 button3' 'input4 bug';
+    grid-template-areas: 'header header' 'alert alert' 'input1 button1' 'input2 button2' 'input3 button3' 'empty input4';
     grid-column-gap: 1.75em;
   }
 }
