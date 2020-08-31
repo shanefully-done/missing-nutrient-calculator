@@ -47,13 +47,13 @@ function detectLanguage() {
 }
 
 function setLanguage() {
-	document.querySelector("#lcal").innerHTML = interfaceLanguage.calories;
-    document.querySelector("#ltotalcarb").innerHTML = interfaceLanguage.totalcarb;
-    document.querySelector("#lprotein").innerHTML = interfaceLanguage.protein;
-    document.querySelector("#lfat").innerHTML = interfaceLanguage.fat;
-    document.querySelector("#lcalculate").innerHTML = interfaceLanguage.calculate;
-    document.querySelector("#lreset").innerHTML = interfaceLanguage.reset;
-    document.querySelector("#llang").innerHTML = interfaceLanguage.lang;
+	document.querySelector("#cal").placeholder = interfaceLanguage.calories;
+    document.querySelector("#totalcarb").placeholder = interfaceLanguage.totalcarb;
+    document.querySelector("#protein").placeholder = interfaceLanguage.protein;
+    document.querySelector("#fat").placeholder = interfaceLanguage.fat;
+    document.querySelector("#calculate").innerHTML = interfaceLanguage.calculate;
+    document.querySelector("#reset").innerHTML = interfaceLanguage.reset;
+    document.querySelector("#lang").innerHTML = interfaceLanguage.lang;
     document.querySelector("#bug").innerHTML = interfaceLanguage.bug;
 }
 

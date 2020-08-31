@@ -9,6 +9,7 @@ function calculate() {
             document.querySelector("#cal").attributes.placeholder.value = missingNumber;
         } else {
             document.querySelector("#alert").innerHTML = interfaceLanguage.impossible;
+            document.querySelector("#alert").classList.add("active");
             document.querySelector("#cal").attributes.placeholder.value = "";
         }
     } else if (document.querySelector("#totalcarb").value == "") {
@@ -18,6 +19,7 @@ function calculate() {
             document.querySelector("#totalcarb").attributes.placeholder.value = missingNumber;
         } else {
             document.querySelector("#alert").innerHTML = interfaceLanguage.impossible;
+            document.querySelector("#alert").classList.add("active");
             document.querySelector("#totalcarb").attributes.placeholder.value = "";
         }
     } else if (document.querySelector("#protein").value == "") {
@@ -27,6 +29,7 @@ function calculate() {
             document.querySelector("#protein").attributes.placeholder.value = missingNumber;
         } else {
             document.querySelector("#alert").innerHTML = interfaceLanguage.impossible;
+            document.querySelector("#alert").classList.add("active");
             document.querySelector("#protein").attributes.placeholder.value = "";
         }
     } else if (document.querySelector("#fat").value == "") {
@@ -36,6 +39,7 @@ function calculate() {
             document.querySelector("#fat").attributes.placeholder.value = missingNumber;
         } else {
             document.querySelector("#alert").innerHTML = interfaceLanguage.impossible;
+            document.querySelector("#alert").classList.add("active");
             document.querySelector("#fat").attributes.placeholder.value = "";
         }
     }
@@ -45,8 +49,10 @@ function calculate() {
 function full() {
     if (document.querySelector("#cal").value != "" && document.querySelector("#totalcarb").value != "" && document.querySelector("#protein").value != "" && document.querySelector("#fat").value != "") {
         document.querySelector("#alert").innerHTML = interfaceLanguage.full;
+        document.querySelector("#alert").classList.add("active");
     } else {
-        document.querySelector("#alert").innerHTML = ""
+        document.querySelector("#alert").innerHTML = "&nbsp;"
+        document.querySelector("#alert").classList.remove("active");
     }
 }
 
@@ -59,8 +65,8 @@ function reset() {
     document.querySelector("#protein").value = "";
     document.querySelector("#fat").value = "";
 
-    document.querySelector("#cal").attributes.placeholder.value = "";
-    document.querySelector("#totalcarb").attributes.placeholder.value = "";
-    document.querySelector("#protein").attributes.placeholder.value = "";
-    document.querySelector("#fat").attributes.placeholder.value = "";
+    document.querySelector("#cal").attributes.placeholder.value = "Calories";
+    document.querySelector("#totalcarb").attributes.placeholder.value = "Total Carbs";
+    document.querySelector("#protein").attributes.placeholder.value = "Protein";
+    document.querySelector("#fat").attributes.placeholder.value = "Fat";
 }

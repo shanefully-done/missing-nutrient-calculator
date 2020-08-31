@@ -2,51 +2,37 @@
 <html>
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
     <link rel="stylesheet" type="text/css" href="./css/normalise.css">
-    <!-- <link rel="stylesheet" type="text/css" href="./css/skeleton.css"> -->
+    <link rel="stylesheet" type="text/css" href="./css/skeleton.css">
     <link rel="stylesheet" type="text/css" href="./css/style.css">
     <script src="./js/calculate.js"></script>
 </head>
 
 <body>
-    <div class="calculator">
-        <div class="inputForm">
-            <label id="lcal"></label>
-            <div class="cal">
-                <input type="number" min="0" id="cal" class="ical" placeholder="" onchange="calculate()">
-            </div>
-            
-            <label id="ltotalcarb"></label>
-            <div class="totalcarb">
-                <input type="number" min="0" id="totalcarb" class="itotalcarb" placeholder="" onchange="calculate()">
-            </div>
-            
-            <label id="lprotein"></label>
-            <div class="protein">
-                <input type="number" min="0" id="protein" class="iprotein" placeholder="" onchange="calculate()">
-            </div>
-            
-            <label id="lfat"></label>
-            <div class="fat">
-                <input type="number" min="0" id="fat" class="ifat" placeholder="" onchange="calculate()">
-            </div>
-        </div>
-        
-        <div class="buttons">
-            <button class="calculate" onclick="calculate()">
-                <label id="lcalculate"></label>
-            </button>
-            <button class="reset" onclick="reset()">
-                <label id="lreset"></label>
-            </button>
-            <button class="lang" onclick="switchLanguage()">
-                <label id="llang"></label>
-            </button>
+    <div class="container">
+
+        <div class="header">
+            <h4>Missing Nutrient Calculator</h4>
+            <p>Fill 3 nutrients to find out the missing nutrient.</p>
         </div>
 
-        <div id="alert" class="alert"></div>
+        <div id="alert" class="alert">&nbsp;</div>
+
+        <input type="number" id="cal" class="cal" placeholder="Calories" onchange="calculate()">
+        <button id="calculate" class="menuButton calculate" onclick="calculate()">Calculate</button>
+
+        <input type="number" id="totalcarb" class="totalcarb" placeholder="Total Carbohydrate" onchange="calculate()">
+        <button id="reset" class="menuButton reset" onclick="reset()">Reset</button>
+
+        <input type="number" id="protein" class="protein" placeholder="Protein" onchange="calculate()">
+        <button id="lang" class="menuButton lang" onclick="switchLanguage()"></button>
+
+        <input type="number" id="fat" class="fat" placeholder="Fat" onchange="calculate()">
         <div id="bug" class="bug"></div>
+
     </div>
 </body>
 <script src="./js/language.js"></script>
+
 </html>

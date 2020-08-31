@@ -1,93 +1,13 @@
-/* Larger than mobile */
-@media (min-width: 400px) {
-    body {
-        zoom: 2;
-        -moz-transform: scale(3);
-        -moz-transform-origin: 0 0;
-    }
-    .calculator {
-        max-width: 90%;
-    }
-}
-
-/* Larger than phablet (also point when grid becomes active) */
-@media (min-width: 550px) {
-    body {
-        zoom: 2;
-        -moz-transform: scale(3);
-        -moz-transform-origin: 0 0;
-    }
-    .calculator {
-        max-width: 80%;
-    }
-}
-
-/* Larger than tablet */
-@media (min-width: 750px) {
-    body {
-        zoom: 1.5;
-        -moz-transform: scale(3);
-        -moz-transform-origin: 0 0;
-    }
-    .calculator {
-        max-width: 333px;
-    }
-}
-
-/* Larger than desktop */
-@media (min-width: 1000px) {
-    .calculator {
-        max-width: 333px;
-    }
-}
-
-.calculator {
-    margin: 1rem auto;
-}
-
-.inputForm input {
-    margin-bottom: 2rem;
-    height: 2rem;
-    width: 100%;
-}
-
-.inputForm input::placeholder {
-    color: red;
-    font-weight: bold;
-}
-
-.inputForm label {
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-.buttons button {
-    width: 100px;
-    height: 45px;
-    margin: 0 0 0 0;
-    padding: 0 0 0 0;
-    font-size: 16px;
-    text-transform: uppercase;
-}
-
-.buttons > .lang {
-    float: right;
-    background-color: crimson;
-    color: white;
-    font-weight: bold;
-}
-
 .alert {
-    margin-top: 1rem;
-    font-size: 1rem;
-    color: red;
-    text-align: center;
+    padding: 4px 8px 4px 8px;
+    margin: 0 0 12px 0;
 }
 
-.bug {
-    position: absolute;
-    bottom: 0;
-    margin-bottom: 1rem;
-    font-size: 14px;
+.alert.active {
+    color: #31708f;
+    background: #d9edf7;
+}
+
+.missingNumber {
+    color: red;
 }
