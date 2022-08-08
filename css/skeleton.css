@@ -579,7 +579,7 @@ body {
 /* Larger than tablet */
 @media only screen and (min-width: 750px) {
   .container {
-    grid-template-areas: 'header header' 'alert alert' 'input1 button1' 'input2 button2' 'input3 button3' 'empty input4';
+    grid-template-areas: 'header header' 'alert alert' 'input1 button1' 'input2 button2' 'input3 empty' 'input4 button3';
     grid-column-gap: 1.75em;
   }
 }
@@ -587,7 +587,7 @@ body {
 /* Larger than desktop */
 @media only screen and (min-width: 1000px) {
   .container {
-    grid-template-areas: 'header header' 'alert alert' 'input1 button1' 'input2 button2' 'input3 button3' 'empty input4';
+    grid-template-areas: 'header header' 'alert alert' 'input1 button1' 'input2 button2' 'input3 empty' 'input4 button3';
     grid-column-gap: 1.75em;
   }
 }
