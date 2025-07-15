@@ -23,7 +23,7 @@ export interface Translations {
 
 const translations: Record<Language, Translations> = {
 	en: {
-		title: "miscalc",
+		title: "miscalc by shane.",
 		subtitle: "Calculate the missing macronutrient value",
 		calories: "Calories",
 		protein: "Protein (g)",
@@ -43,7 +43,7 @@ const translations: Record<Language, Translations> = {
 		korean: "한국어",
 	},
 	ko: {
-		title: "miscalc",
+		title: "miscalc by shane.",
 		subtitle: "빠진 영양소를 계산하세요",
 		calories: "칼로리",
 		protein: "단백질 (g)",
