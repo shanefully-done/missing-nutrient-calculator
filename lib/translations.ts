@@ -19,6 +19,8 @@ export interface Translations {
 	language: string;
 	english: string;
 	korean: string;
+	github: string;
+	blog: string;
 }
 
 const translations: Record<Language, Translations> = {
@@ -41,6 +43,8 @@ const translations: Record<Language, Translations> = {
 		language: "Language",
 		english: "English",
 		korean: "한국어",
+		github: "GitHub",
+		blog: "Blog",
 	},
 	ko: {
 		title: "miscalc by shane.",
@@ -61,6 +65,8 @@ const translations: Record<Language, Translations> = {
 		language: "언어",
 		english: "English",
 		korean: "한국어",
+		github: "GitHub",
+		blog: "블로그",
 	},
 };
 

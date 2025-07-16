@@ -1,0 +1,53 @@
+# Lessons Learned
+
+## Project Intelligence
+
+### Layout Restructuring: Moving Links from Footer to Header
+
+**Date**: 2025-07-15
+
+**Before**: 
+- GitHub and Blog links were positioned in the footer
+- Footer was located at the bottom of the page
+- Language switcher was isolated in the header area
+- Layout was simple but navigation links were separated from main interaction area
+
+**After**:
+- GitHub and Blog links moved to header, positioned inline with language switcher
+- Created new `HeaderNav` component (`components/header-nav.tsx`) as client component
+- Links and language switcher now share the same flex container
+- Responsive design implemented:
+  - Desktop: Horizontal layout (links + language switcher in same row)
+  - Mobile: Vertical stack (links below language switcher)
+- Footer completely removed for cleaner layout
+
+**Technical Implementation**:
+- Used client component (`"use client"`) for HeaderNav to access translation system
+- Leveraged existing translation keys from `lib/translations.ts`
+- Applied consistent styling using Tailwind CSS responsive utilities
+- Maintained security attributes (target="_blank" rel="noopener noreferrer")
+
+**Key Insights**:
+- **Component Architecture**: Creating dedicated client components for navigation allows better separation of concerns
+- **Responsive Design**: Using Tailwind's responsive utilities (hidden sm:block, sm:hidden) provides clean mobile/desktop switching
+- **Translation Integration**: Client components can access the language context directly, making translation implementation straightforward
+- **Layout Efficiency**: Moving navigation links to the header improves discoverability and reduces vertical space usage
+
+**Code Patterns Used**:
+```typescript
+// Responsive visibility pattern
+className="hidden sm:block" // Desktop only
+className="sm:hidden" // Mobile only
+
+// Flex container for inline positioning
+<div className="flex items-center gap-4">
+  <a>...</a>
+  <a>...</a>
+  <LanguageSwitcher />
+</div>
+```
+
+**Future Considerations**:
+- Consider adding hover states or active indicators for better UX
+- Evaluate if additional navigation items would benefit from this pattern
+- Monitor for any accessibility issues with the new layout
