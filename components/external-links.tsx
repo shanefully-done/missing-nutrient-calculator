@@ -16,7 +16,7 @@ export function ExternalLinks() {
 				{t.github}
 			</a>
 			<a
-				href="https://shanefully-done.github.io"
+				href="https://www.ixtj.dev/"
 				target="_blank"
 				rel="noopener noreferrer"
 				className="text-muted-foreground hover:text-primary transition-colors"
